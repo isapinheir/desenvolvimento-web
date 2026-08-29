@@ -4,7 +4,7 @@
 
 **2. O que aconteceria se navegadores não interpretassem HTML?** 
    
-   R: Não seria possível aplicar as ferramentas de formatação, como por exemplo colocar a tag ```<h1>``` com um tamanho maior de fonte e em negrito, elas apareceriam  Além disso, as outras tecnologias implementadas na página web não poderiam ser aplicadas corretamente.
+   R: Não seria possível aplicar as ferramentas de formatação, como por exemplo colocar a tag ```<h1>``` com um tamanho maior de fonte e em negrito, elas apareceriam diretamente como está no código fonte. Além disso, as outras tecnologias implementadas na página web não poderiam ser aplicadas corretamente.
 
 **3. Qual a maior mudança da Web 1.0 para a Web 2.0?**
    
