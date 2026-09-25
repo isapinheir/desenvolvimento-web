@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #f9f1e4;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+.container{
+    display: flex;
+    gap: 20px;
+}
+main{
+    flex: 1;
+}
+aside{
+    width: 30%;
+}
+nav a {
+    margin-right: 15px;
+    color: #0099E0;
+    text-decoration: none;
+}
+h1{
+    color:#0099E0;
+}
+h2{
+    color:#8F95D3
+}
+h3{
+    color:#AE7DB6;
+}
+p{
+    color:#0E0E52;
+}
+li{
+    color:#150578;
+}
+a{
+    color:#F45B69;
+}
+table{
+    background-color: aliceblue;
+    color: #8F95D3;
+    text-align: center;
+}
+.hobbies{
+    display: flex;
+    flex-direction: row;
+    
+}
+.hobbies-img{
+    display: flex;
+    flex-direction: column;
+}
+.hobbies-img img{
+    width: 5em;
+    height: 5em;
+    margin-left: 3em;
+}
