@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
 
 /* Reset básico */
 
@@ -21,15 +22,16 @@ body {
 
 /* Header */
 
-.cabecalho {
+header {
     background-color: #fff;
     padding: 2rem;
     border-bottom: 3px solid #8F95D3;
     text-align: center;
 }
 
-.cabecalho h1 {
+header h1 {
     color: #0099E0;
+    font-family: 'Borel', 'cursive';
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
 }
@@ -77,26 +79,45 @@ aside {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(9.3px);
     -webkit-backdrop-filter: blur(9.3px);
+
     padding: 1.6rem;
     border-radius: 8px;
     box-shadow: 0 10px 6px rgba(0, 0, 0, 0.199);
 }
-.card-secundario{
-    background-color: #f9f1e4;
-    border: 1px solid #DDDDDD;
+.card-projeto{
+    display: flex;
+        /* From https://css.glass */
+    background: rgba(216, 241, 251, 0.397);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.3px);
+    -webkit-backdrop-filter: blur(9.3px);
+
+    justify-content: space-between;
+    border: 1px solid #d2edf3;
     border-radius: 10px;        
     padding: 20px;    
     margin: 20px 0;       
+    gap: 2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
     cursor: pointer;
 }
-.card-secundario p{
+.card-projeto p{
     margin-bottom: 0.8rem;
 }
-.card-titulo{
+.card-projeto-titulo{
     font-size: 1.5rem;
     color: #0099E0;
 }
+.card-projeto-secundario{
+    align-self: center;
+
+}
+.card-projeto-secundario img{
+    width: 10rem;
+    border-radius: 20px;
+}
+
 .card-tec{
     display: inline;
     padding: 0.5rem;
@@ -145,7 +166,7 @@ p, li {
 }
 
 table {
-    width: 100%;
+    width: 80%;
     border-collapse: collapse;
     background-color: aliceblue;
     color: #150578;
@@ -153,7 +174,6 @@ table {
 }
 
 th, td {
-    padding: 10px;
     border: 1px solid #d0d7de;
     text-align: center;
 }
@@ -161,6 +181,7 @@ th, td {
 th {
     background-color: #8F95D3;
     color: #fff;
+    padding: 0.7rem;
 }
 
 /* Formulário */
