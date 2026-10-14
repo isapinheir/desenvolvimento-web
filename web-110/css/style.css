@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap&family=Quicksand:wght@500;600;700&display=swap');
+
+:root {
+    --azul1: #88c0f9;
+    --azul2: #51ade6;
+    --azul-escuro: #2b51b8;
+    --accent-glow: rgba(136, 168, 249, 0.6);
+
+    --texto1: #172652;
+    --texto2: #465c8c;
+    
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --card-header-bg: linear-gradient(to right, var(--azul2), var(--azul1));
+    --pilula-bg: linear-gradient(to bottom, #eef6ff, #c0e8ff);
+
+    --gradiente1: linear-gradient(135deg, #c0d1ff, #5194e6);
+    --gradiente2: linear-gradient(135deg, #d0ddff, #a0c0ff);
+    --highlight:  rgba(136, 177, 249, 0.25);
+
+    --radius-btn: 1.4rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* == GERAIS == */
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: url(../img/wallpaper.jpeg) no-repeat center/100% fixed;
+    color: var(--texto1);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    overflow-x: hidden;
+}
+
+main{
+    width: 100%;
+    max-width: 85vw;
+    padding: 1.25rem;
+    border-radius: 2rem;
+    box-shadow: 0 15px 40px rgba(92, 43, 184, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.8);
+    overflow: hidden;
+    position: relative;
+    /* From https://css.glass */
+    background: rgba(216, 241, 251, 0.397);
+    border-radius: 16px;
+    backdrop-filter: blur(9.3px);
+    -webkit-backdrop-filter: blur(9.3px);
+}
+
+h1 {
+    background: linear-gradient(to bottom, #d2bcfc, #9d76f3);
+    border: 2px solid #ffffff;
+    border-radius: var(--radius-btn);
+    text-align: center;
+    padding: 0.45rem;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 2.3rem;
+    color: #ffffff;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 3px 8px rgba(92, 43, 184, 0.2), inset 0 1px 2px rgba(255,255,255,0.8);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+h2{
+    font-size: 1.5rem;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+hr{
+    border: none;
+    border-top: 2px dashed var(--azul-escuro);
+    margin: 0.6rem 0;
+}
+
+.highlight {
+    background-color: var(--highlight);
+    padding: 0.1rem 0.3rem;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.pilula {
+    display: inline;
+    background: var(--pilula-bg);
+    border: 2px solid #ffffff;
+    border-radius: var(--radius-btn);
+    padding: 0.4rem 1.25rem;
+    margin: 0.3rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--texto2);
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(92, 43, 184, 0.15), inset 0 1px 2px rgba(255,255,255,0.8);
+    transition: all 0.2s ease;
+    cursor: default;
+}
+.pilula i{
+    padding-right: .5rem;
+}
+
+.navegacao{
+    background: transparent;
+    border: 1px solid #ffffff;
+    color: #fafafa;
+}
+
+.link:hover, .navegacao:hover{ /*estilos das pilulas*/
+    background: linear-gradient(to bottom, var(--azul1), var(--azul2));
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px var(--accent-glow), inset 0 1px 2px rgba(255,255,255,0.8);
+    cursor: pointer;
+}
+
+.container-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+}
+
+/* === NAVEGAÇÃO === */
+
+.nav-tabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* === LISTAS === */
+
+.lista{
+    padding-left: 1rem;
+    line-height: 2;
+}
+.quadrada{
+    list-style-type: square;
+}
+.romana{
+    list-style-type: upper-roman;
+}
+
+
+/* == CARDS == */
+
+
+.card {
+    background: var(--card-bg);
+    border: 2px solid #ffffff;
+    border-radius: 16px;
+    padding: 1rem;
+    box-shadow: 0 6px 15px rgba(92, 43, 184, 0.08), inset 0 1px 3px rgba(255,255,255,0.8);
+    position: relative;
+}
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--card-header-bg);
+    padding: 0.35rem 0.75rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 0.85rem;
+    box-shadow: 0 2px 5px rgba(92,43,184,0.2);
+}
+
+.card-header i {
+    font-size: 0.8rem;
+}
+
+
+/* == SOBRE MIM == */
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.profile-avatar-box {
+    width: 8rem;
+    height: 8rem;
+    background-color: var(--azul1);
+    background-image: url('../img/minha-foto.jpg');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.profile-avatar-box img{
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+}
+
+.profile-name-group h2 {
+    font-size: 2rem;
+    color: var(--azul-escuro);
+}
+
+.profile-sub {
+    font-size: .9rem;
+    color: var(--texto2);
+    letter-spacing: 0.5px;
+    line-height: 2;
+    font-weight: 700;
+}
+.bio-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--texto1);
+}
+
+
+/* === PROJETOS === */
+
+.media-grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+.card-projeto {
+    height: fit-content;
+    background: var(--gradiente2);
+    border: 2px solid #ffffff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    color: var(--azul-escuro);
+    box-shadow: 0 4px 10px rgba(92,43,184,0.1), inset 0 2px 4px rgba(255,255,255,0.8);
+    transition: transform 0.2s ease;
+}
+
+.card-projeto:hover {
+    transform: translateY(-2px);
+}
+.card-projeto-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card-projeto-container:first-child{
+    margin-top: .5rem;
+    flex-wrap: nowrap;
+}
+.card-projeto-container:last-child{
+    margin-bottom: .2rem;
+}
+.card-projeto-container img{
+    width: 5rem;
+    margin: 0 .5rem;
+    border-radius: 10px;
+}
+.card-projeto-titulo{
+    font-size: 1.3rem;
+    font-family: "Pixelify Sans";
+    color: var(--azul-escuro);
+    align-self: center;
+}
+.card-projeto-desc{
+    margin: .8rem;
+}
+
+/* == TABELA == */
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: aliceblue;
+    color: #150578;
+    margin-top: 10px;
+}
+
+th, td {
+    border: 1px solid #d0d7de;
+    text-align: center;
+}
+
+th {
+    background: var(--gradiente2);
+    color: #fff;
+    padding: 0.7rem;
+}
+
+/* == FORMULÁRIO == */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--azul2);
+    border-radius: 4px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.btn-enviar {
+    background: var(--gradiente1);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    margin-top: 5px;
+    transition: all 0.2s ease;
+}
+
+.btn-enviar:hover {
+    background: var(--gradiente2);
+}
+
+/* == HOBBIES */
+
+.mini-img-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 0.85rem;
+}
+
+.mini-img-box {
+    height: 85px;
+    background: var(--gradiente1);
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: var(--azul-escuro);
+    font-size: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(255,255,255,0.7);
+}
+
+.mini-img-box p {
+    margin-top: 4px;
+    font-family: 'Pixelify Sans', sans-serif;
+    letter-spacing: 0.5px;
+}
+.mini-img-box img {
+    width: 3.5em;
+    height: 3.5em;
+}
