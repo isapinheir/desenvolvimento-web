@@ -418,24 +418,3 @@ input, textarea {
         height: 1.4em;
     }
 }
-
-@media(max-width: 750px){ /*Telas pequenas*/
-    body{
-        padding: 0;
-    }
-    main{
-        max-width: inherit
-    }
-    .container-grid{
-        display: flex;
-        flex-direction: column;
-    }
-    /*hobbies*/
-    .mini-img-box p{
-        font-size: 1.3rem;
-    }
-    .mini-img-box img{
-        width: 2.3em;
-        height: 2.3em;
-    }
-}
