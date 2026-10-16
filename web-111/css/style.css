@@ -94,6 +94,7 @@ hr{
     border-radius: var(--radius-btn);
     padding: 0.4rem 1.25rem;
     margin: 0.3rem;
+    text-align: center;
     font-size: 0.85rem;
     font-weight: 700;
     color: var(--texto2);
@@ -208,12 +209,6 @@ hr{
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.profile-avatar-box img{
-    width: inherit;
-    height: inherit;
-    border-radius: inherit;
-}
-
 .profile-name-group h2 {
     font-size: 2rem;
     color: var(--azul-escuro);
@@ -227,6 +222,7 @@ hr{
     font-weight: 700;
 }
 .bio-text {
+    margin: 0 .5rem;
     font-size: 1rem;
     line-height: 1.5;
     color: var(--texto1);
@@ -308,6 +304,9 @@ th {
     color: #fff;
     padding: 0.7rem;
 }
+td{
+    padding: .3rem 0;
+}
 
 /* == FORMULÁRIO == */
 
@@ -354,7 +353,7 @@ input, textarea {
 }
 
 .mini-img-box {
-    height: 85px;
+    height: 5rem;
     background: var(--gradiente1);
     border: 2px solid #ffffff;
     border-radius: 10px;
@@ -370,11 +369,73 @@ input, textarea {
 }
 
 .mini-img-box p {
-    margin-top: 4px;
+    margin-top:  4px;
     font-family: 'Pixelify Sans', sans-serif;
     letter-spacing: 0.5px;
 }
 .mini-img-box img {
     width: 3.5em;
     height: 3.5em;
+}
+
+
+/* == RESPONSIVIDADE == */
+
+@media (min-width: 750px) and (max-width: 1024px) { /*Telas médias*/
+    .profile-name-group h2 {
+        color: blueviolet;
+    }
+    main{
+        max-width: 100vw;
+    }
+    h2{
+        font-size: 1.1rem;
+    }
+    .nav-tabs{
+        flex-wrap: nowrap;
+    }
+    /*sobre mim*/
+    .profile-name-group h2{
+        font-size: 1.35rem;
+        margin: .3rem;
+    }
+    .profile-sub{
+        font-size: .8rem;
+    }
+    .bio-text{
+        font-size: 1rem;
+    }
+    /*tabela*/
+    td{
+        font-size: .8rem;
+    }
+    /*hobbies*/
+    .mini-img-box p{
+        font-size: 1rem;
+    }
+    .mini-img-box img{
+        width: 1.4em;
+        height: 1.4em;
+    }
+}
+
+@media(max-width: 750px){ /*Telas pequenas*/
+    body{
+        padding: 0;
+    }
+    main{
+        max-width: inherit
+    }
+    .container-grid{
+        display: flex;
+        flex-direction: column;
+    }
+    /*hobbies*/
+    .mini-img-box p{
+        font-size: 1.3rem;
+    }
+    .mini-img-box img{
+        width: 2.3em;
+        height: 2.3em;
+    }
 }
