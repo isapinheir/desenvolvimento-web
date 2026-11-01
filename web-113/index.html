@@ -204,24 +204,22 @@
 
 
                     </div>
-                </section>
-
-                <!-- SEÇÃO DE CURIOSIDADES -->
-                
+                </section>                
 
             </div>
             </div>
             </section>
 
+            <section id="conh" class="oculto" onclick="paginacao(2)">
             <div class="container-grid">
-                <section id="conh" class="oculto" onclick="paginacao(2)">
-                    <div style="display: flex; flex-direction: column; gap: 1rem;">
-                        <section class="card transparente" id="conhecimentos">
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+
+                    <section class="card transparente" id="conhecimentos">
 
                     <div class="card-header">
-                            <i class="fa-solid fa-circle-info"></i>
-                            <span>Meus Conhecimentos</span>
-                        </div>
+                        <i class="fa-solid fa-file-code"></i>
+                        <span>Linguaens de Programação</span>
+                    </div>
 
                     <div class="table-wrapper">
                         <table>
@@ -233,16 +231,6 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>HTML</td>
-                                    <td>Intermediário</td>
-                                    <td>4 anos</td>
-                                </tr>
-                                <tr>
-                                    <td>CSS</td>
-                                    <td>Intermediário</td>
-                                    <td>4 anos</td>
-                                </tr>
                                 <tr>
                                     <td>JavaScript</td>
                                     <td>Intermediário</td>
@@ -263,34 +251,49 @@
                                     <td>Básico</td>
                                     <td>1 ano</td>
                                 </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </section>
+
+                <section class="card transparente" id="conhecimentos">
+
+                    <div class="card-header">
+                            <i class="fa-solid fa-database"></i>
+                            <span>Back-end</span>
+                        </div>
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tecnologia</th>
+                                    <th>Nível</th>
+                                    <th>Tempo de experiência</th>
+                                </tr>
+                            </thead>
+                            <tbody>
                                 <tr>
                                     <td>MySQL</td>
                                     <td>Básico</td>
                                     <td>2 anos</td>
                                 </tr>
-                                <tr>
-                                    <td>React.js</td>
-                                    <td>Básico</td>
-                                    <td>1 ano</td>
-                                </tr>
-                                <tr>
-                                    <td>React Native</td>
-                                    <td>Básico</td>
-                                    <td>1 ano</td>
-                                </tr>
                             </tbody>
                         </table>
                     </div>
                 </section>
+
                     </div>
 
                     <div style="display: flex; flex-direction: column; gap: 1rem;">
+
                         <section class="card transparente" id="conhecimentos">
 
                     <div class="card-header">
-                            <i class="fa-solid fa-circle-info"></i>
-                            <span>Meus Conhecimentos</span>
-                        </div>
+                        <i class="fa-solid fa-code"></i>
+                        <span>Front-end</span>
+                    </div>
 
                     <div class="table-wrapper">
                         <table>
@@ -311,32 +314,7 @@
                                     <td>CSS</td>
                                     <td>Intermediário</td>
                                     <td>4 anos</td>
-                                </tr>
-                                <tr>
-                                    <td>JavaScript</td>
-                                    <td>Intermediário</td>
-                                    <td>4 anos</td>
-                                </tr>
-                                <tr>
-                                    <td>Java</td>
-                                    <td>Básico</td>
-                                    <td>2 anos</td>
-                                </tr>
-                                <tr>
-                                    <td>Python</td>
-                                    <td>Básico</td>
-                                    <td>1 ano</td>
-                                </tr>
-                                <tr>
-                                    <td>PHP</td>
-                                    <td>Básico</td>
-                                    <td>1 ano</td>
-                                </tr>
-                                <tr>
-                                    <td>MySQL</td>
-                                    <td>Básico</td>
-                                    <td>2 anos</td>
-                                </tr>
+                                </tr>                                
                                 <tr>
                                     <td>React.js</td>
                                     <td>Básico</td>
@@ -350,13 +328,69 @@
                             </tbody>
                         </table>
                     </div>
+
                 </section>
+
+                <section class="card transparente" id="conhecimentos">
+
+                    <div class="card-header">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                        <span>Ferramentas</span>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tecnologia</th>
+                                    <th>Nível</th>
+                                    <th>Tempo de experiência</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Git/GitHub</td>
+                                    <td>Básico</td>
+                                    <td>2 anos</td>
+                                </tr>
+                                <tr>
+                                    <td>Figma</td>
+                                    <td>Básico</td>
+                                    <td>2 anos</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </section>
+
                     </div>
                 </section>
             </div>
 
             <section id="contato" class="oculto" onclick="paginacao(3)">
                 <div class="container-grid">
+
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <section class="card">
+
+                        <h2>Quer falar comigo?</h2>
+
+                        <p class="bio-text">
+                            Pode usar minhas redes sociais ou
+                            usar o formulário!
+                        </p>
+
+                        <hr>
+
+                        <div class="nav-tabs">
+                            <a href="https://www.linkedin.com/in/isabeli-barbosa?" class="pilula link"><i class="fa-brands fa-linkedin"></i>linkedin</a>
+                            <a href="https://github.com/isapinheir" class="pilula link"><i class="fa-brands fa-github"></i>github</a>
+                            <a href="mailto:isabeli.barrr@gmail.com" class="pilula link"><i class="fa-solid fa-envelope"></i>email</a>
+                        </div>
+
+                    </section>
+                </div>
                 <div style="display: flex; flex-direction: column; gap: 1rem;">
 
                     <section class="card" id="contato">
