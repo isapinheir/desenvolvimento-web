@@ -12,17 +12,25 @@
     <main>
                          
         <nav class="nav-tabs">
-            <a href="#sobre" class="pilula navegacao">sobre mim</a>
-            <a href="#conhecimentos" class="pilula navegacao">conhecimentos</a>
-            <a href="#contato" class="pilula navegacao">contato</a>
+            <button class="pasta ativo" onclick="paginacao(1)">
+                <a href="#" class="pilula navegacao">sobre mim</a>
+            </button>
+            <button class="pasta" onclick="paginacao(2)">
+                <a href="#" class="pilula navegacao">conhecimentos</a>
+            </button>
+            <button class="pasta" onclick="paginacao(3)">
+                <a href="#" class="pilula navegacao">contato</a>
+            </button>
         </nav>
 
-        <div id="container-grid">
-            
+        <section id="sobre">
+
+        <div class="container-grid">
+
             <div style="display: flex; flex-direction: column; gap: 1rem;">
                 
                 <!-- SEÇÃO SOBRE MIM -->
-                <section class="card" id="sobre">
+                <section class="card">
                     <div class="card-header">
                         <i class="fa-solid fa-circle-info"></i>
                         <span>Sobre Mim</span>
@@ -57,103 +65,27 @@
                         <li><strong class="highlight">Etec Raposo Tavares:</strong> Ensino Técnico Integrado ao Médio de Desenvolvimento de Sistemas</li>
                         <li><strong class="highlight">E.E. Benedicto Caldeira:</strong> Ensino Fundamental</li>
                     </ul>
-                </section>
-
-                <!-- SEÇÃO DE CONHECIMENTOS -->
-                <section class="card transparente" id="conhecimentos">
-
-                    <div class="card-header">
-                            <i class="fa-solid fa-circle-info"></i>
-                            <span>Meus Conhecimentos</span>
-                        </div>
-
-                    <div class="table-wrapper">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Tecnologia</th>
-                                    <th>Nível</th>
-                                    <th>Tempo de experiência</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>HTML</td>
-                                    <td>Intermediário</td>
-                                    <td>4 anos</td>
-                                </tr>
-                                <tr>
-                                    <td>CSS</td>
-                                    <td>Intermediário</td>
-                                    <td>4 anos</td>
-                                </tr>
-                                <tr>
-                                    <td>JavaScript</td>
-                                    <td>Intermediário</td>
-                                    <td>4 anos</td>
-                                </tr>
-                                <tr>
-                                    <td>Java</td>
-                                    <td>Básico</td>
-                                    <td>2 anos</td>
-                                </tr>
-                                <tr>
-                                    <td>Python</td>
-                                    <td>Básico</td>
-                                    <td>1 ano</td>
-                                </tr>
-                                <tr>
-                                    <td>PHP</td>
-                                    <td>Básico</td>
-                                    <td>1 ano</td>
-                                </tr>
-                                <tr>
-                                    <td>MySQL</td>
-                                    <td>Básico</td>
-                                    <td>2 anos</td>
-                                </tr>
-                                <tr>
-                                    <td>React.js</td>
-                                    <td>Básico</td>
-                                    <td>1 ano</td>
-                                </tr>
-                                <tr>
-                                    <td>React Native</td>
-                                    <td>Básico</td>
-                                    <td>1 ano</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
-
-                <!-- SEÇÃO DE CONTATO -->
-                <section class="card" id="contato">
-                    <div class="card-header">
-                        <i class="fa-solid fa-circle-info"></i>
-                        <span>Contato</span>
-                    </div>
-
-                    <form>
-                            <label for="nomeContato">Nome:</label>
-                            <input type="text" id="nomeContato" placeholder="Seu nome" required>
-                            
-                            <label for="emailContato">E-mail:</label>
-                            <input type="email" id="emailContato" placeholder="email@dominio.com" required>
-                            
-                            <label for="assunto">Assunto:</label>
-                            <input type="text" id="assunto" placeholder="Assunto da sua mensagem" required>
-
-                            <label for="mensagemContato">Mensagem:</label>
-                            <textarea id="mensagemContato" rows="4" placeholder="Escreva sua mensagem" required></textarea>
-
-                        <button type="submit" class="btn-enviar" onclick="enviar()">Enviar Mensagem</button>
-                    </form>
-                    
-                </section>
-
+                </section> 
                 
-            </div>
+                <section class="card">
+
+                    <div class="card-header">
+                        <i class="fa-solid fa-star"></i>
+                        <span>Meus hobbies</span>
+                    </div>
+
+                    <section class="mini-img-grid">
+                        <div class="mini-img-box"><img src="img/controle.png"><p>jogos</p></div>
+                        <div class="mini-img-box"><img src="img/livro.png"><p>livros</p></div>
+                        <div class="mini-img-box"><img src="img/flor.png"><p>jardinagem</p></div>
+                        <div class="mini-img-box"><img src="img/quadro.png"><p>design e ilustração</p></div>
+                        <div class="mini-img-box"><p>fotografia</p></div>
+                        <div class="mini-img-box"><p>crochê</p></div>
+                    </section>
+                </section>
+                
+                </div>
+
 
             <!-- COLUNA 2 -->
             <div style="display: flex; flex-direction: column; gap: 1rem;">
@@ -275,26 +207,185 @@
                 </section>
 
                 <!-- SEÇÃO DE CURIOSIDADES -->
-                <section class="card">
-
-                    <div class="card-header">
-                        <i class="fa-solid fa-star"></i>
-                        <span>Meus hobbies</span>
-                    </div>
-
-                    <section class="mini-img-grid">
-                        <div class="mini-img-box"><img src="img/controle.png"><p>jogos</p></div>
-                        <div class="mini-img-box"><img src="img/livro.png"><p>livros</p></div>
-                        <div class="mini-img-box"><img src="img/flor.png"><p>jardinagem</p></div>
-                        <div class="mini-img-box"><img src="img/quadro.png"><p>design e ilustração</p></div>
-                        <div class="mini-img-box"><p>fotografia</p></div>
-                        <div class="mini-img-box"><p>crochê</p></div>
-                    </section>
-                </section>
+                
 
             </div>
+            </div>
+            </section>
 
-        </div>  
+            <div class="container-grid">
+                <section id="conh" class="oculto" onclick="paginacao(2)">
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <section class="card transparente" id="conhecimentos">
+
+                    <div class="card-header">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span>Meus Conhecimentos</span>
+                        </div>
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tecnologia</th>
+                                    <th>Nível</th>
+                                    <th>Tempo de experiência</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>HTML</td>
+                                    <td>Intermediário</td>
+                                    <td>4 anos</td>
+                                </tr>
+                                <tr>
+                                    <td>CSS</td>
+                                    <td>Intermediário</td>
+                                    <td>4 anos</td>
+                                </tr>
+                                <tr>
+                                    <td>JavaScript</td>
+                                    <td>Intermediário</td>
+                                    <td>4 anos</td>
+                                </tr>
+                                <tr>
+                                    <td>Java</td>
+                                    <td>Básico</td>
+                                    <td>2 anos</td>
+                                </tr>
+                                <tr>
+                                    <td>Python</td>
+                                    <td>Básico</td>
+                                    <td>1 ano</td>
+                                </tr>
+                                <tr>
+                                    <td>PHP</td>
+                                    <td>Básico</td>
+                                    <td>1 ano</td>
+                                </tr>
+                                <tr>
+                                    <td>MySQL</td>
+                                    <td>Básico</td>
+                                    <td>2 anos</td>
+                                </tr>
+                                <tr>
+                                    <td>React.js</td>
+                                    <td>Básico</td>
+                                    <td>1 ano</td>
+                                </tr>
+                                <tr>
+                                    <td>React Native</td>
+                                    <td>Básico</td>
+                                    <td>1 ano</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <section class="card transparente" id="conhecimentos">
+
+                    <div class="card-header">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span>Meus Conhecimentos</span>
+                        </div>
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Tecnologia</th>
+                                    <th>Nível</th>
+                                    <th>Tempo de experiência</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>HTML</td>
+                                    <td>Intermediário</td>
+                                    <td>4 anos</td>
+                                </tr>
+                                <tr>
+                                    <td>CSS</td>
+                                    <td>Intermediário</td>
+                                    <td>4 anos</td>
+                                </tr>
+                                <tr>
+                                    <td>JavaScript</td>
+                                    <td>Intermediário</td>
+                                    <td>4 anos</td>
+                                </tr>
+                                <tr>
+                                    <td>Java</td>
+                                    <td>Básico</td>
+                                    <td>2 anos</td>
+                                </tr>
+                                <tr>
+                                    <td>Python</td>
+                                    <td>Básico</td>
+                                    <td>1 ano</td>
+                                </tr>
+                                <tr>
+                                    <td>PHP</td>
+                                    <td>Básico</td>
+                                    <td>1 ano</td>
+                                </tr>
+                                <tr>
+                                    <td>MySQL</td>
+                                    <td>Básico</td>
+                                    <td>2 anos</td>
+                                </tr>
+                                <tr>
+                                    <td>React.js</td>
+                                    <td>Básico</td>
+                                    <td>1 ano</td>
+                                </tr>
+                                <tr>
+                                    <td>React Native</td>
+                                    <td>Básico</td>
+                                    <td>1 ano</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                    </div>
+                </section>
+            </div>
+
+            <section id="contato" class="oculto" onclick="paginacao(3)">
+                <div class="container-grid">
+                <div style="display: flex; flex-direction: column; gap: 1rem;">
+
+                    <section class="card" id="contato">
+                        <div class="card-header">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <span>Contato</span>
+                        </div>
+
+                        <form>
+                                <label for="nomeContato">Nome:</label>
+                                <input type="text" id="nomeContato" placeholder="Seu nome" required>
+                                
+                                <label for="emailContato">E-mail:</label>
+                                <input type="email" id="emailContato" placeholder="email@dominio.com" required>
+                                
+                                <label for="assunto">Assunto:</label>
+                                <input type="text" id="assunto" placeholder="Assunto da sua mensagem" required>
+
+                                <label for="mensagemContato">Mensagem:</label>
+                                <textarea id="mensagemContato" rows="4" placeholder="Escreva sua mensagem" required></textarea>
+
+                            <button type="submit" class="btn-enviar" onclick="enviar()">Enviar Mensagem</button>
+                        </form>
+                    </section>
+
+                </div>
+                </div>
+            </section>
+         
 
     </main>
 
