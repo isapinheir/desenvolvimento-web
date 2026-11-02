@@ -13,7 +13,7 @@
     --card-bg: rgba(255, 255, 255, 0.7);
     --card-header-bg: linear-gradient(to right, var(--azul2), var(--azul1));
     --pilula-bg: linear-gradient(to bottom, #eef6ff, #c0e8ff);
-    --form-bg: aliceblue;
+    --form-bg: #f0f8ff;
 
     --gradiente1: linear-gradient(135deg, #c0d1ff, #5194e6);
     --gradiente2: linear-gradient(135deg, #d0ddff, #a0c0ff);
@@ -23,6 +23,19 @@
 
     --radius-btn: 1.4rem;
 }
+
+#tema.claro{
+    background-color: #e2e8f0;
+    border: 1px solid #cbd5e1;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+#tema.escuro  {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
 
 * {
     box-sizing: border-box;
@@ -140,6 +153,105 @@ hr{
     width: 5rem;
     z-index: 99;
 }
+
+/* === BOTÃO MODO CLARO/ESCURO === */
+
+#tema{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 44px;
+    height: 90px;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    color: #fff;
+}
+
+.icone-track{
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    transition: opacity 0.3s ease, transform 0.4s ease, color 0.4s ease;
+}
+.claro .icone-track.fa-sun {
+    color: #f59e0b;
+    opacity: 1;
+}
+.claro .icone-track.fa-moon{
+    color: #94a3b8;
+    opacity: 0.5;
+}
+.escuro .icone-track.fa-sun{
+    color: #64748b;
+    opacity: 0.5;
+}
+.escuro .icone-thumb.fa-sun {
+    color: #818cf8;
+    opacity: 1;
+}
+
+.tema-thumb {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s ease, box-shadow 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.claro .tema-thumb {
+    transform: translateY(0px);
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.escuro .tema-thumb {
+    transform: translateY(46px);
+    background-color: #0f172a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* dentro do thumb */
+.thumb-icon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+.claro .icone-thumb.fa-sun {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+    color: #f59e0b;
+}
+.claro .icone-thumb.fa-moon{
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.5);
+    color: #818cf8;
+}
+
+.escuro .icone-thumb.fa-sun {
+    opacity: 0;
+    transform: rotate(90deg) scale(0.5);
+    color: #f59e0b;
+}
+.escuro .icone-thumb.fa-moon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+    color: #818cf8;
+}
+
+
 
 /* === NAVEGAÇÃO === */
 
@@ -490,7 +602,6 @@ input:focus, textarea:focus{
 
     --glass-bg: rgba(0, 0, 0, 0.3);
     --card-bg: rgba(37, 37, 70, 0.7);
-    --card-header-bg: linear-gradient(to right, var(--azul2), var(--azul1));
     --pilula-bg: linear-gradient(to bottom, #274250, #18415d);
     --form-bg: #080f35;
 
@@ -499,7 +610,8 @@ input:focus, textarea:focus{
     --highlight:  rgba(136, 177, 249, 0.25);
     --borda: #2b6095;
     --boxshadow: 0 0 5px rgba(101, 171, 246, 0.5);
-
-    --radius-btn: 1.4rem;
+    }
+    #tema{
+        color: #000;
     }
 }
